@@ -1,0 +1,153 @@
+/* ── Google Fonts (Inter, Geist, JetBrains Mono) ── */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ── Tailwind v4 Theme Tokens ── */
+@theme {
+  /* Surfaces */
+  --color-bg-base: #080B14;
+  --color-bg-sidebar: #0B1020;
+  --color-surface-main: #101629;
+  --color-surface-elevated: #151D32;
+  --color-surface-secondary: #1A2440;
+  --color-surface-hover: #1F2B4C;
+
+  /* Legacy aliases mapped to new dark palette for stability */
+  --color-paper: #080B14;
+  --color-surface: #101629;
+  --color-surface-card: #151D32;
+  --color-ink: #F4F6FF;
+  --color-ink-muted: #A0AAC4;
+  --color-ink-subtle: #707D9E;
+
+  /* Borders */
+  --color-border-hairline: #252F49;
+  --color-border-subtle: #1C243A;
+  --color-hairline: #252F49;
+
+  /* Typography Colors */
+  --color-text-primary: #F4F6FF;
+  --color-text-secondary: #A0AAC4;
+  --color-text-muted: #707D9E;
+
+  /* Accents */
+  --color-primary: #8065FF;
+  --color-primary-light: rgba(128, 101, 255, 0.15);
+  --color-primary-hover: #6E50FF;
+  --color-accent-primary: #8065FF;
+  --color-accent-secondary: #5B7CFA;
+  --color-accent-cyan: #29D8C5;
+
+  /* Semantic Status Colors */
+  --color-success: #27D99A;
+  --color-success-light: rgba(39, 217, 154, 0.12);
+  --color-warning: #FFB547;
+  --color-warning-light: rgba(255, 181, 71, 0.12);
+  --color-risk: #FF6977;
+  --color-risk-light: rgba(255, 105, 119, 0.12);
+  --color-critical: #FF6977;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Geist Mono', monospace;
+
+  /* Radius */
+  --radius-card: 14px;
+  --radius-sm: 8px;
+  --radius-pill: 9999px;
+  --radius-lg: 18px;
+
+  /* Shadows (Restrained, subtle elevation) */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-drawer: -4px 0 28px rgba(0, 0, 0, 0.6);
+  --shadow-modal: 0 16px 48px rgba(0, 0, 0, 0.7);
+
+  /* Animations */
+  --animate-fade-in: fade-in 160ms ease-out;
+  --animate-slide-up: slide-up 160ms ease-out;
+  --animate-slide-right: slide-right 160ms ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Base ── */
+:root {
+  --background: #080B14;
+  --foreground: #F4F6FF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle transitions: 120-180ms */
+*,
+*::before,
+*::after {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Disable transitions for media/print */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #252F49;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A4769;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #8065FF;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(128, 101, 255, 0.35);
+  color: #F4F6FF;
+}

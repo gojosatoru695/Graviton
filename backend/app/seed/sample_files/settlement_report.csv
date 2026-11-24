@@ -1,0 +1,2 @@
+settlement_id,marketplace,period_start,period_end,gross_order_value,commission_fee,logistics_fee,return_penalties,taxes_tcs_tds,net_settlement_payable,actual_bank_credit,bank_utr
+MEESHO-SETTLE-OCT2024,Meesho,2024-10-01,2024-10-31,48500.00,7250.00,4800.00,1500.00,485.00,34465.00,33615.00,CMS4910284901

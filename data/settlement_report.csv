@@ -1,0 +1,2 @@
+settlement_id,marketplace,period_start,period_end,gross_order_value,commission_fee,shipping_fee,return_rto_fee,tax_deduction_tcs_tds,other_known_adjustment,expected_net_payable,actual_bank_credit,unexplained_residual_variance,unexplained_deduction_1,unexplained_deduction_2,bank_utr_reference,variance_status
+MEESHO-SETTLE-OCT2024,Meesho,01/10/2024,31/10/2024,52400.00,7860.00,5200.00,2100.00,524.00,350.00,37066.00,35516.00,1550.00,1000.00 (Unitemized Quality Penalty Surcharge),550.00 (Unreconciled Logistics Weight Discrepancy),CMS5910284901,unexplained_residual
